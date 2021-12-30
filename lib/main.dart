@@ -39,8 +39,6 @@ class _MyHomePageState extends State<MyHomePage>
     controller = AppController();
   }
 
-  final key = ObjectKey('Morro');
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -60,7 +58,6 @@ class _MyHomePageState extends State<MyHomePage>
                 children: [
                   ...controller.sequencia
                       .map((item) => Positioned(
-                            key: key,
                             top: double.parse(('${3 * item}')),
                             child: Container(
                               height: 20,
@@ -73,7 +70,6 @@ class _MyHomePageState extends State<MyHomePage>
                       .toList(),
                   ...controller.sequencia
                       .map((item) => Positioned(
-                            key: key,
                             right: 0,
                             top: double.parse(('${3 * item as int}')),
                             child: Container(
