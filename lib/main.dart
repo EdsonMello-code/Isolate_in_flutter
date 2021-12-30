@@ -1,4 +1,3 @@
-import 'dart:math';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 
@@ -137,3 +136,8 @@ class AppController extends ChangeNotifier {
 }
 
 enum AppState { start, loading, success, failure }
+
+
+// Isolate: the isolate is semilar to thread, but the only difference is one isolte don´t access the memory of other.
+// the flutter running in single isolate, but we can create others isolate to Mass processing for don´t lock the main isolate
+// With use of more isolate we also have an increase in the use of mémoria ram. 
